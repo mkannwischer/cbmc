@@ -6,11 +6,12 @@ Author: Daniel Kroening, kroening@kroening.com
 
 \*******************************************************************/
 
-#include "boolbv.h"
-
+#include <util/byte_operators.h>
 #include <util/range.h>
 #include <util/replace_symbol.h>
 #include <util/std_expr.h>
+
+#include "boolbv.h"
 
 bvt boolbvt::convert_let(const let_exprt &expr)
 {
@@ -68,6 +69,24 @@ bvt boolbvt::convert_let(const let_exprt &expr)
 
   for(const auto &pair : make_range(variables).zip(fresh_variables))
     replace_symbol.insert(pair.first, pair.second);
+
+  // For array-typed let bindings, record an array equality between
+  // the fresh variable and the bound value so that the array theory
+  // generates element-wise equality constraints connecting them.
+  for(const auto &pair : make_range(fresh_variables).zip(values))
+  {
+    if(
+      pair.first.type().id() == ID_array &&
+      is_unbounded_array(to_array_type(pair.first.type())))
+    {
+      const equal_exprt eq(pair.first, pair.second);
+      const equal_exprt lowered_eq =
+        has_byte_operator(eq) ? to_equal_expr(lower_byte_operators(eq, ns))
+                              : eq;
+      const literalt eq_lit = record_array_equality(lowered_eq);
+      prop.l_set_to_true(eq_lit);
+    }
+  }
 
   // rename the bound symbols in 'where'
   exprt where_renamed = expr.where();
