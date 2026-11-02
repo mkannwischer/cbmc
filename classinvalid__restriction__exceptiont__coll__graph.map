@@ -1,0 +1,20 @@
+<map id="invalid_restriction_exceptiont" name="invalid_restriction_exceptiont">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,496,144,536"/>
+<area shape="rect" id="Node000002" href="$classcprover__exception__baset.html" title="Base class for exceptions thrown in the cprover project." alt="" coords="185,421,370,447"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,454,123,498,121,493,235,449"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="31,333,118,359"/>
+<area shape="poly" id="edge9_Node000001_Node000003" title=" " alt="" coords="76,372,75,447,76,496,71,496,69,447,71,372"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="116,362,251,419,249,424,114,367"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,244,144,284"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="77,298,77,333,72,333,72,298"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="207,333,348,359"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="280,373,280,421,275,421,275,373"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="186,244,369,284"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="280,298,280,333,275,333,275,298"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="205,155,350,195"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="280,209,280,244,275,244,275,209"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="192,80,363,105"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="280,119,280,155,275,155,275,119"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="224,5,331,31"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="280,45,280,80,275,80,275,45"/>
+</map>
